@@ -17,4 +17,7 @@ class DashboardController extends Controller
       $areas = Area::latest()->get();
    	return view('admin.dashboard', compact('landlords', 'renters', 'houses', 'areas'));
    }
+public function aboutus(){
+    return view('footer.aboutus');
+}
 }

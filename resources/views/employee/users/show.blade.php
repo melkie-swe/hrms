@@ -28,7 +28,7 @@
                     User Profile
                 </a>
             </li>
-            
+
         </ol>
     </section>
     <!--section ends-->
@@ -51,7 +51,7 @@
                             <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
                             Change picture</a>
                     </li>
-                    
+
 
                 </ul>
                 <div  class="tab-content mar-top" id="clothing-nav-content">
@@ -150,7 +150,7 @@
                                                                 </td>
                                                             @endif
                                                         </tr>
-                                                        
+
                                                         {{-- enter from salary table --}}
 
                                                         <tr>
@@ -158,9 +158,9 @@
                                                             <td>
                                                                 @if(!empty($user->rperson->employmentInformation->basic_salary))
                                                                 <p class="user_name_max">{!! $user->rperson->employmentInformation->basic_salary + $user->rperson->employmentInformation->allowance ?? null  !!}</p>
-                                                        
+
                                                                 @endif
-                                                                
+
                                                             </td>
 
                                                         </tr>
@@ -299,7 +299,7 @@
                                         <div class="col-md-offset-3 col-md-9 ml-auto">
                                             <button type="submit" class="btn btn-primary" style="margin-left: 300px" >Submit
                                             </button>
-                                           
+
                                     </div>
                                 {!! Form::close() !!}</form>
                             </div>
@@ -330,7 +330,6 @@
                 else if  ($('#password').val() === $('#password-confirm').val()) {
                     check = true;
                 }
-
                 if(check == true){
                 var sendData =  '_token=' + $("input[name='_token']").val() +'&password=' + $('#password').val() +'&id=' + {{ $user->id }};
                     var path = "{{ route('employee.passwordreset') }}";;
@@ -351,18 +350,11 @@
                     });
                 }
             });
-
-            
         });
-
-
-
         $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
             e.target // newly activated tab
             e.relatedTarget // previous active tab
             $("#clothing-nav-content .tab-pane").removeClass("show active");
         });
-
     </script>
-
 @stop

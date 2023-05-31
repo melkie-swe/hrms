@@ -1,5 +1,7 @@
 <?php
-
+//use APP\Http\Controller\DashboardController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,8 @@ Route::get('/search-result-by-range', 'HomeController@searchByRange')->name('sea
 
 Route::get('/houses/details/{id}', 'HomeController@details')->name('house.details');
 Route::get('/all-available/houses', 'HomeController@allHouses')->name('house.all');
+
+Route::get('/allhouses', 'HomeController@allHouses')->name('allhouses');
 Route::get('/available-houses/area/{id}', 'HomeController@areaWiseShow')->name('available.area.house');
 
 Route::post('/house-booking/id/{id}', 'HomeController@booking')->name('booking');
@@ -29,6 +33,7 @@ Route::post('/house-booking/id/{id}', 'HomeController@booking')->name('booking')
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
@@ -99,3 +104,5 @@ Route::group(['as' => 'renter.', 'prefix' => 'renter', 'namespace' => 'renter', 
         Route::get('review-edit/{id}', 'DashboardController@reviewEdit')->name('review.edit');
         Route::post('review-update/{id}', 'DashboardController@reviewUpdate')->name('review.update');
     });
+
+

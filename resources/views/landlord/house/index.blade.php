@@ -6,12 +6,12 @@
 <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-               @include('partial.successMessage')  
+               @include('partial.successMessage')
 
                 <div class="card my-5 mx-4">
                     <div class="card-header">
                       <h3 class="card-title float-left"><strong>Your Houses ({{ $housecount }})</strong></h3>
-                      
+
                     <a href="{{route('landlord.house.create')}}" class="btn btn-success btn-md float-right c-white">Add new <i class="fa fa-plus"></i></a>
                     </div>
                     <!-- /.card-header -->
@@ -44,35 +44,35 @@
                             @endif
                           </td>
                           <td>
-                             
+
                             <a href="{{ route('landlord.house.status', $house->id) }}"  class="btn btn-warning btn-sm ">Switch Status</a>
                             <a href="{{ route('landlord.house.show', $house->id) }}"  class="btn btn-success btn-sm">Details</a>
                             <a href="{{ route('landlord.house.edit', $house->id) }}"  class="btn btn-info btn-sm">Edit</a>
                             <button class="btn btn-danger btn-sm" type="button" onclick="deleteHouse({{ $house->id }})">
                                 Delete
                             </button>
-            
+
                           <form id="delete-form-{{ $house->id }}" action="{{ route('landlord.house.destroy',$house->id) }}" method="POST" style="display: none;">
                               @csrf
                               @method('DELETE')
-                              
+
                           </form>
                           </td>
                         </tr>
-                        @endforeach    
+                        @endforeach
                         </tbody>
                       </table>
                     </div>
-                      
+
             </div> <!-- /.card-body -->
-              @else 
+              @else
                  <h2 class="text-center text-info font-weight-bold m-3">No House Found</h2>
               @endif
 
                <div class="pagination">
                   {{ $houses->links() }}
                 </div>
-                   
+
             </div>
                   <!-- /.card -->
             </div>
@@ -91,7 +91,6 @@
           },
           buttonsStyling: false
       })
-      
       swalWithBootstrapButtons.fire({
           title: 'Are you sure to remove this house?',
           type: 'warning',
@@ -101,10 +100,8 @@
           reverseButtons: true
       }).then((result) => {
           if (result.value) {
-              
               event.preventDefault();
               document.getElementById('delete-form-'+id).submit();
-      
           } else if (
           /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
@@ -114,7 +111,6 @@
           )
           }
       })
- }	
-
+ }
  </script>
 @endsection

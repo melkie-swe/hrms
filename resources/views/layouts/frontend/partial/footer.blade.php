@@ -10,17 +10,36 @@
                 </div>
                 <div class="col-md-4">
                     <h4 class="head"><u>Menu</u> </h4>
-                    <p><i class="fas fa-user"></i> About Us</p>
-                    <p><i class="fas fa-right">_</i> Rent</p>
-                    <p><i class="fas fa-other">_</i> Others</p>
-                    <p style="width: 80%">
+
+                    <a href="{{ route('home') }}">
+                        <p><i class="fas fa-home"></i> home</p>
+                    </a>
+                    <a href="{{ route('aboutus') }}">
+                        <p><i class="fas fa-user"></i> About Us</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fas fa"></i> Rent</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fas fa"></i> Others</p>
+                    </a>
+
+
                 </div>
                 <div class="col-md-4">
                     <h4 class="head"><u>Highlight</u> </h4>
-                    <p><i class="fas fa-home"></i> House</p>
-                    <p><i class="fas fa-home"></i> Studio</p>
-                    <p><i class="fas fa-home"></i> Villa</p>
-                    <p><i class="fas fa-home"></i> Condominum</p>
+                    <a href="{{ route('allhouses') }}">
+                        <p><i class="fas fa-home"></i> House</p>
+                    </a>
+                    <a href="{{ route('allhouses') }}">
+                        <p><i class="fas fa-home"></i> Studio</p>
+                    </a>
+                    <a href="{{ route('allhouses') }}">
+                        <p><i class="fas fa-home"></i> Villa</p>
+                    </a>
+                    <a href="{{ route('allhouses') }}">
+                        <p><i class="fas fa-home"></i> Condominum</p>
+                    </a>
                     <p style="width: 80%">
                 </div>
             </div>
@@ -28,12 +47,12 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4 social">
                     <a class="btn text-white btn-floating m-1 rounded-circle"
-                        style="background-color: rgb(56, 59, 233);" href="#!" role="button"><i
+                        style="background-color: rgb(56, 59, 233);" href="https://www.facebook.com/" role="button"><i
                             class="fab fa-facebook-f"></i></a>
                     <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #2bcffc;"
-                        href="#!" role="button"><i class="fab fa-telegram"></i></a>
+                        href="tg://" role="button"><i class="fab fa-telegram"></i></a>
                     <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #ac2bac;"
-                        href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                        href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div class="row ">

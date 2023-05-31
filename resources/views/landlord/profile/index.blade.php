@@ -9,7 +9,7 @@
     </div>
     <div class="row p-3">
         <div class="col-md-4 text-center">
-        <img src="{{  $profile->image != null ? asset('storage/profile_photo/'. $profile->image) : asset('backend/img/user2-160x160.jpg') }}" 
+        <img src="{{  $profile->image != null ? asset('storage/profile_photo/'. $profile->image) : asset('backend/img/user2-160x160.jpg') }}"
         style="height: 200px; width: 170px; margin-top:90px" class="elevation-2" alt="User Image">
         </div>
         <div class="col-md-8">
@@ -28,7 +28,7 @@
                     </tr>
                     <tr>
                         <th>Email</th>
-                        <td>{{ $profile->email }}</td>
+                        {{-- <td>{{ $profile->email }}</td> --}}
                     </tr>
                     <tr>
                         <th>Nid</th>
@@ -41,7 +41,7 @@
 
                 </table>
               </div>
-            
+
         </div>
     </div>
 </div>

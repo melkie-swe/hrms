@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         @section('title')
-        | Welcome to Addis House Rental
+        {{-- | Welcome to Addis House Rental --}}
+        WELCOME TO ADDIS HOUSE RENTAL
         @show
     </title>
     <!--global css starts-->
@@ -26,7 +27,7 @@
         <div class="icon-section">
             <div class="container">
                 <div class="row">
-                    {{-- <div class="col-lg-4 col-8 col-md-4 mt-2">
+                    <div class="col-lg-4 col-8 col-md-4 mt-2">
                         <ul class="list-inline">
                             <li>
                                 <a href="#"> <i class="livicon" data-name="facebook" data-size="18" data-loop="true"
@@ -71,7 +72,7 @@
                                         717-4200</a></label>
                             </li>
                         </ul>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@
     </div>
 
 @stop
-{{-- Page content --}}
+{{-- Page content --}} 
 @section('content')
     <aside class="right-aside">
     <!-- Content Header (Page header) -->

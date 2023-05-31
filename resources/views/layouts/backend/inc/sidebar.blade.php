@@ -15,17 +15,14 @@
           style="height: 100px; width: 100px" class="img-circle elevation-2" alt="User Image">
         <br>
         <div style="color: honeydew;line-height: 4px; font-weight: 600" class="text-center mt-3 info">
-          <p>Name: {{ Auth::user()->name }}</p>
-          <p>Email: {{ Auth::user()->email }}</p>
+          <p>{{ Auth::user()->name }}</p>
+          <p>{{ Auth::user()->contact }}</p>
         </div>
       </div>
     </div>
-
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-
         @if (Request::is('admin*'))
         <li class="nav-item has-treeview active">
           <a href="{{ route('admin.dashboard') }}"
@@ -36,16 +33,12 @@
             </p>
           </a>
         </li>
-
-
         <li class="nav-item has-treeview">
           <a href="{{ route('admin.area.index') }}" class="nav-link {{ Request::is('admin/area*') ? 'active' : '' }}">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <p class="pl-2">Areas</p>
           </a>
         </li>
-
-
         <li class="nav-item has-treeview">
           <a href="{{ route('admin.house.index') }}" class="nav-link {{ Request::is('admin/house*') ? 'active' : '' }}">
             <i class="fa fa-home" aria-hidden="true"></i>
@@ -54,10 +47,6 @@
             </p>
           </a>
         </li>
-
-
-
-
         <li class="nav-item has-treeview">
           <a href="{{ route('admin.manage.landlord') }}"
             class="nav-link {{ Request::is('admin/manage-landlord') ? 'active' : '' }}">
@@ -67,7 +56,6 @@
             </p>
           </a>
         </li>
-
         <li class="nav-item has-treeview">
           <a href="{{ route('admin.manage.renter') }}"
             class="nav-link {{ Request::is('admin/manage-renter') ? 'active' : '' }}">
@@ -77,7 +65,6 @@
             </p>
           </a>
         </li>
-
         <li class="nav-item has-treeview">
           <a href="{{ route('admin.profile.show') }}"
             class="nav-link {{ Request::is('admin/profile-info') ? 'active' : '' }}">
@@ -87,7 +74,6 @@
             </p>
           </a>
         </li>
-
         <li class="nav-item has-treeview">
           <a href="{{ route('admin.booked.list') }}"
             class="nav-link {{ Request::is('admin/booked-houses-list') ? 'active' : '' }}">
@@ -107,10 +93,7 @@
             </p>
           </a>
         </li>
-
-
         @endif
-
         @if (Request::is('landlord*'))
         <li class="nav-item has-treeview">
           <a href="{{ route('landlord.dashboard') }}"
@@ -150,7 +133,6 @@
             </p>
           </a>
         </li>
-
         <li class="nav-item has-treeview">
           <a href="{{ route('landlord.bookingRequestList') }}"
             class="nav-link {{ Request::is('landlord/booking-request-list') ? 'active' : '' }}">
@@ -160,7 +142,6 @@
             </p>
           </a>
         </li>
-
         <li class="nav-item has-treeview">
           <a href="{{ route('landlord.currently.staying') }}"
             class="nav-link {{ Request::is('landlord/booked/currently/renter') ? 'active' : '' }}">
@@ -181,8 +162,6 @@
           </a>
         </li>
         @endif
-
-
         @if (Request::is('renter*'))
         <li class="nav-item has-treeview">
           <a href="{{ route('renter.dashboard') }}"

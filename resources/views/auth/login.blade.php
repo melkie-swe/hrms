@@ -1,7 +1,7 @@
 @extends('layouts.frontend.app')
 
 @section('title','Login')
-    
+
 
 @section('content')
 {{-- <div class="container my-5">
@@ -77,18 +77,18 @@
 <div class="container-fluid login-register">
     <div class="row">
       <div class="col-md-3 col-lg-4 col-sm-2 col-xs-2">
-      
+
       </div>
       <div class="col-md-6 col-lg-4  col-sm-8 col-xs-8">
         <div class="card">
           <div class="card-header">
-            
+
             <h3 style="color: white;"> <strong>Login</strong> </h3>
           </div>
 
           <div class="card-body">
-            
-             <form action="{{ route('login') }}" method="POST"> 
+
+             <form action="{{ route('login') }}" method="POST">
 
                @csrf
 
@@ -111,7 +111,7 @@
             <div class="input-group mb-3">
                 <input type="password" class="form-control" placeholder="Enter your password" name="password">
               </div>
-            
+
             <button type="submit" class="btn btn-primary btn-block">Login</button>
             @if (Route::has('password.request'))
                     <center> <a class="btn btn-link text-white" href="{{ route('password.request') }}">
@@ -120,18 +120,18 @@
                     </center>
              @endif
 
-             <a href="{{ url('auth/google') }}" style="margin-top: 20px;" class="btn btn-lg btn-success btn-block">
+             {{-- <a href="{{ url('auth/google') }}" style="margin-top: 20px;" class="btn btn-lg btn-success btn-block">
 
                 <strong>Login With Google</strong>
 
-              </a> 
-          </form> 
+              </a>  --}}
+          </form>
           </div>
-          
+
         </div>
       </div>
       <div class="col-md-3 col-lg-4  col-sm-2 col-xs-2">
-        
+
       </div>
     </div>
   </div>

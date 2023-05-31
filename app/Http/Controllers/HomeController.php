@@ -19,7 +19,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        
+
     }
 
     /**
@@ -65,12 +65,12 @@ class HomeController extends Controller
     }
 
     public function search(Request $request){
-        
+
         $room = $request->room;
         $bathroom = $request->bathroom;
         $rent = $request->rent;
         $address = $request->address;
-        
+
 
         if( $room == null && $bathroom == null && $rent == null && $address == null){
             session()->flash('search', 'Your have to fill up minimum one field for search');
@@ -100,7 +100,7 @@ class HomeController extends Controller
 
 
     public function booking($house){
-        
+
         // if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2){
         //     session()->flash('danger', 'Sorry admin and landlord are not able to book any houses. Please login with renter account');
         //     return redirect()->back();
@@ -123,14 +123,14 @@ class HomeController extends Controller
         }
 
 
-       
 
-    
+
+
         //find current date month year
         // $now = Carbon::now();
         // $now = $now->format('F d, Y');
-        
-        
+
+
         $booking = new Booking();
         $booking->address = $house->address;
         $booking->rent = $house->rent;
@@ -141,8 +141,13 @@ class HomeController extends Controller
 
         session()->flash('success', 'House Booking Request Send Successfully');
         return redirect()->back();
- 
+
 
     }
 
+     public function aboutus(){
+    return view('footer.aboutus');
+    }
+
 }
+

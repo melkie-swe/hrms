@@ -1,28 +1,26 @@
-
-
 @component('mail::layout')
     {{-- Header --}}
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])
-           Josh Admin
+            Admin
         @endcomponent
     @endslot
 
     {{-- Body --}}
-# Hello
+    # Hello
 
-We have received a new contact mail.<br />
-**Name :** {{ $data['contact-name'] }}<br />
-**Email :** {{ $data['contact-email'] }}<br />
-**Message :** {{ $data['contact-msg'] }}
+    We have received a new contact mail.<br />
+    **Name :** {{ $data['contact-name'] }}<br />
+    **Email :** {{ $data['contact-email'] }}<br />
+    **Message :** {{ $data['contact-msg'] }}
 
 
-Thanks,
+    Thanks,
 
     {{-- Footer --}}
     @slot('footer')
         @component('mail::footer')
-           &copy; 2019 All Copy right received
+            &copy; 2023 All Copy right received
         @endcomponent
     @endslot
 @endcomponent
